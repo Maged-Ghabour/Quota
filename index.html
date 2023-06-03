@@ -1,0 +1,77 @@
+<!DOCTYPE html >
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Satisfaction</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="imgs/2.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar bg-dark" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="imgs/2.png" alt="Bootstrap" width="50" height="50">
+    </a>
+    <h1 class="text-white"> 🤔باقي كام جيجا ؟  </h1>
+  </div>
+</nav>
+
+
+<div class="container">
+    <section class="mt-5">
+    <div class="row">
+        <!-- <form action=""> -->
+               <div class="mb-4">
+                   <label for="quota" class="form-label w-100 text-end">الباقة</label>
+                    <select class="form-select" aria-label="Default select example" dir="rtl" id="allQuotes">
+                        <option  selected disabled>اختار الباقة الي عليها العميل</option>
+                        <option value="140">140</option>
+                        <option value="200">200</option>
+                        <option value="250">250</option>
+                        <option value="400">400</option>
+                        <option value="600">600</option>
+                        <option value="other">باقة اخري</option>
+                    </select>
+               </div>
+              <div class="mb-3" dir="rtl" id="otherDiv" style="display: none;">
+               <label for="quota" class="form-label w-100 text-end" dir="rtl">ادخل الباقه هنا</label>
+               <input type="number" class="form-control" id="other">
+               </div>
+               <div class="mb-3" dir="rtl">
+               <label for="quota" class="form-label w-100 text-end" dir="rtl">المتبقي من ال BSS </label>
+               <input type="number" class="form-control" id="bytes_input">
+               </div>
+
+
+
+
+               <div class="border-2 p-2 m-3 shadow-sm p-3 mb-5 bg-body rounded" dir="rtl" id="content"> 
+                  <p>الباقة الحالية : <span id="quota"></span></p>
+                  <p>المتبقي منها  : <span id="remining"></span></p>
+                  <p>المستخدم منها : <span id="consuming"></span></p>
+                  <p>و حضرتك يمكنك متابعة الاستهلاك من خلال التطبيق أو الموقع االخاص بنا أو الخدمة الصوتية كوسيلة سهلة لمتابعة الاستهلاك في المرات القادمة
+و بالنسبة للخدمة الصوتية بتبقى باختيار رقم 2 بعد اختيار 2 للانترنت المنزلى وتأكيد رقم الخدمة</p>
+              </div>
+
+             
+        </div>
+
+        <button class="btn btn-primary m-auto d-flex justify-content-center align-items-center" id="copy">انسخ الكندايه</button>
+        <!-- </form> -->
+    </div>
+</section>
+
+</div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
