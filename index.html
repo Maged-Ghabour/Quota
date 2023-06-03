@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Satisfaction</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="imgs/2.png" type="image/x-icon">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -17,9 +14,20 @@
 <body>
 <nav class="navbar bg-dark" data-bs-theme="dark">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="imgs/2.png" alt="Bootstrap" width="50" height="50">
-    </a>
+
+    <div class="dropdown">
+        
+            <a class="navbar-brand dropdown-toggle " href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="imgs/2.png" alt="Bootstrap" width="50" height="50">
+            </a>        
+   
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://maged-ghabour.github.io/Quota/">باقي كام جيجا ؟ 🤔</a></li>
+            <li><a class="dropdown-item" href="https://maged-ghabour.github.io/Routers/">كندات الرواتر 👋</a></li>
+            <li><a class="dropdown-item" href="https://maged-ghabour.github.io/satisfaction/">حساب عروض الالغاء 🥲</a></li>
+        </ul>
+        </div>
+
     <h1 class="text-white"> 🤔باقي كام جيجا ؟  </h1>
   </div>
 </nav>
@@ -30,9 +38,9 @@
     <div class="row">
         <!-- <form action=""> -->
                <div class="mb-4">
-                   <label for="quota" class="form-label w-100 text-end">الباقة</label>
+                   <label for="quota" class="form-label w-100 text-start">الباقة</label>
                     <select class="form-select" aria-label="Default select example" dir="rtl" id="allQuotes">
-                        <option  selected disabled>اختار الباقة الي عليها العميل</option>
+                        <option value="0"  selected disabled>اختار الباقة الي عليها العميل</option>
                         <option value="140">140</option>
                         <option value="200">200</option>
                         <option value="250">250</option>
@@ -42,12 +50,12 @@
                     </select>
                </div>
               <div class="mb-3" dir="rtl" id="otherDiv" style="display: none;">
-               <label for="quota" class="form-label w-100 text-end" dir="rtl">ادخل الباقه هنا</label>
-               <input type="number" class="form-control" id="other">
+               <label for="quota" class="form-label w-100 text-start" >ادخل الباقه هنا</label>
+               <input type="text" class="form-control" id="other">
                </div>
                <div class="mb-3" dir="rtl">
-               <label for="quota" class="form-label w-100 text-end" dir="rtl">المتبقي من ال BSS </label>
-               <input type="number" class="form-control" id="bytes_input">
+               <label for="quota" class="form-label w-100 text-start">المتبقي من ال BSS </label>
+               <input type="text" onKeyPress="if(this.value.length==15) return false;" class="form-control px-3 text-start" id="bytes_input" maxlength="15"  pattern="[0-9]+"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                </div>
 
 
@@ -71,7 +79,6 @@
 
 </div>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>

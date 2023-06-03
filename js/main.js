@@ -19,11 +19,11 @@ function convertToGB() {
 
 
 function consumed() {
-    if (parseFloat(quota.innerHTML)> parseFloat(remining.innerHTML)) {
+    if (parseFloat(quota.innerHTML) > parseFloat(remining.innerHTML)) {
 
         return parseFloat(quota.innerHTML) - parseFloat(remining.innerHTML)
     } else {
-        return 0.00
+        return "😁"
     }
 }
 
@@ -38,7 +38,7 @@ if (allQuotes.value == 'other') {
     consuming.innerHTML = consumed() + ' جيجا'
 } else {
     otherDiv.style.display = "none"
-    quota.innerHTML = allQuotes.value + ' جيجا'
+    quota.innerHTML = allQuotes.value + ' جيجا' 
     consuming.innerHTML = consumed() + ' جيجا'
     } 
   
@@ -91,4 +91,7 @@ Swal.fire('تم نسخ الكنداية بنجاح')
 
 
 })
+
+
+
 
