@@ -25,3 +25,11 @@ th,td,tr{
     right: auto !important;
     left: 0 !important;
 }
+
+p {
+        margin-bottom : 0 !important;
+}
+
+#content{
+    background-color: #daebee !important;
+}
